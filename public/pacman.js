@@ -23,9 +23,9 @@ function createGame(n) {
 
     let [pacmanStartPosition, ghostStartPosition, fruitPosition] = generateRandomPosition(n);
     
-    board[pacmanStartPosition] = 'C';
-    board[ghostStartPosition] = '^';
-    board[fruitPosition] = '@';
+    board[pacmanStartPosition] = '<span class="pacman">C</span>';
+    board[ghostStartPosition] = '<span class="ghost">^</span>';
+    board[fruitPosition] = '<span class="pellet">@</span>';
 
     console.log(board);
     // Convert the board array to a string, with each element separated by a space
@@ -33,7 +33,7 @@ function createGame(n) {
     // Create a new paragraph element
     let p = document.createElement('p');
     // Set the text of the paragraph to the board string
-    p.textContent = boardString;
+    p.innerHTML = boardString;
     // Append the paragraph to the body of the document
     document.body.appendChild(p);
 
@@ -73,14 +73,16 @@ function moveLeft() {
     }
 
     console.log(game);
-    // Convert the board array to a string, with each element separated by a space
     let boardString = game.join(' ');
-    // Create a new paragraph element
     let p = document.createElement('p');
-    // Set the text of the paragraph to the board string
-    p.textContent = boardString;
-    // Append the paragraph to the body of the document
+    p.innerHTML = boardString;
+    // Remove the old game state from the body of the document
+    if (document.body.lastChild) {
+        document.body.removeChild(document.body.lastChild);
+    }
+    // Append the new game state to the body of the document
     document.body.appendChild(p);
+
 
     if (numberOfPellets === 0) {
         console.log('New game');
@@ -122,14 +124,16 @@ function moveRight() {
     }
 
     console.log(game);
-    // Convert the board array to a string, with each element separated by a space
     let boardString = game.join(' ');
-    // Create a new paragraph element
     let p = document.createElement('p');
-    // Set the text of the paragraph to the board string
-    p.textContent = boardString;
-    // Append the paragraph to the body of the document
+    p.innerHTML = boardString;
+    // Remove the old game state from the body of the document
+    if (document.body.lastChild) {
+        document.body.removeChild(document.body.lastChild);
+    }
+    // Append the new game state to the body of the document
     document.body.appendChild(p);
+
 
     if (numberOfPellets === 0) {
         // Create a new game
@@ -172,14 +176,16 @@ function repeatedGhostMovement() {
         }
 
         console.log(game);
-        // Convert the board array to a string, with each element separated by a space
-        let boardString = game.join(' ');
-        // Create a new paragraph element
-        let p = document.createElement('p');
-        // Set the text of the paragraph to the board string
-        p.textContent = boardString;
-        // Append the paragraph to the body of the document
-        document.body.appendChild(p);
+    let boardString = game.join(' ');
+    let p = document.createElement('p');
+    p.innerHTML = boardString;
+    // Remove the old game state from the body of the document
+    if (document.body.lastChild) {
+        document.body.removeChild(document.body.lastChild);
+    }
+    // Append the new game state to the body of the document
+    document.body.appendChild(p);
+
     }, 2000);
 }
 

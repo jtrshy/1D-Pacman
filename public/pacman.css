@@ -1,0 +1,30 @@
+.pacman {
+    color: green;
+}
+
+.pellet {
+    color: yellow;
+}
+
+.ghost {
+    color: pink;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+P {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
