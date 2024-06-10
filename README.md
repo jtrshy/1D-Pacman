@@ -1,5 +1,5 @@
-# csi3x40_labs
-The purpose of this repository is to serve as a repository for CSI 3140 assignment 1 for the Spring/Summer term of 2024 (20245).
+# Assignment 2
+The purpose of this repository is to serve as a repository for CSI 3140 assignment 2 for the Spring/Summer term of 2024 (20245).
 
 Currently, it is a 1D Pacman implementation with all mandatory features listed in the lab instructions (along with some optional features). This includes board creation, left/right movement for Pacman, pellet eating and live score updating, level completion detection after all pellets are eaten, and ghost movement and Pacman death detection (for both when the ghost moves onto Pacman and when the player moves onto the ghost).
 
